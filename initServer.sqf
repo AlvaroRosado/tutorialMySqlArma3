@@ -12,7 +12,7 @@ if (_resultado select 0 == 0) exitWith {
 
 diag_log "Conectado correctamente a  la DB";
 
-protocolID = compileFinal str round(random(999999));
+protocolID = compileFinal str round(random(123));
 	
 _resultado = call compile ("extDB3" callExtension format["9:ADD_DATABASE_PROTOCOL:%1:SQL_CUSTOM:%2:sql_custom.ini", DATABASE_NAME, call protocolID]);
 if (_resultado select 0 == 0) exitWith {
